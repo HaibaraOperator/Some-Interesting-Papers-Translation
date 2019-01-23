@@ -41,7 +41,8 @@
 广义相对论是考虑了广义协变性 (以及局域 Lorentz 对称性) 的一种规范理论, 而量子色动力学 (QCD) 则是考虑 $SU(3)$ 色不变性的规范理论. 这两种理论都服从规范原理, 即二者在局域规范变换下均是不变的, 从而它们在经典层面上会具有相似的性质. 比方说它们的拉氏量都以由联络规范场定义的曲率张量来表示.
 \par
 但它们也存在一些不同之处. 在 QCD 中, 规范势或联络 $A_{\mu}$ 是理论的基本自由度 (d.o.f.), 但在广义相对论中, 联络不再是基本自由度, 而是由度规张量 $g_{\mu\nu}$ 来描述其中的物理. 且它们在运动方程 (EOM) 上存在极大的差异, 对于 QCD, EOM 的解往往是无时间演化的静态或驻点解, 而广义相对论的运动方程解却一般是动力学的, 且具有很强时间关联的解, 比如不考虑宇宙学常数精细调节时的暴涨. 同时在 QCD 中, 我们无法找到可以和广义相对论中标架场 (vierbein) 与挠率张量相对应的项. 综上所述, QCD 是可重整的, 而引力至少在微扰论的观点下是不可重整的. 二者间的相似与差异如表 1 所示.
-\begin{center}
+\begin{table}
+\begin{center}\caption{引力与 QCD 的相似与差异}
 \begin{tabular}{|c|c|c|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
@@ -56,9 +57,9 @@
   可重整性 & 不可重整! & 可重整! \\
   \hline
 \end{tabular}
-\caption{引力与 QCD 的相似与差异}
-\end{center}
 
+\end{center}
+\end{table}
 \indent 作者是从 Utiyama [2] 的教材开始学习的, 这是大阪大学最优秀的教授之一. 这本教材很清楚地写下了 Utiyama 在早年曾经做过的为引力与 Yang--Mills 理论给出统一理解的尝试. 在书中 Utiyama 提及, 他最初的尝试实际上与数学中的纤维丛构造异曲同工, 但直到后来他才意识到这点, 因为在当时纤维丛与统一场论一样只是一个新兴的还在发展的理论. 紧接着, 作者又阅读了 Nash 与 Sen [3] 的教程. 这本书则明确指出 Riemann 流形就是联络由度规给出的一类特殊的纤维丛. 而在 Kobayashi 与 Nomizu [4] 的书中, 他们解释了 Riemann 流形为何特殊以及它特殊在何处. 在将这些数学上的事实翻译为物理语言后, 我们便能够解释广义相对论与规范理论之间的差异了. 而这实际上就是 1--形式的广义相对论 (或称 Palatini 形式) 所考虑的, 在 Palatini 形式中我们视联络与标架为基本场, 度规则不再是基本自由度了.
 \par
 在这篇文章中, 我们将通过 1--形式广义相对论与其他规范理论的比较, 以纤维丛语言讨论引力的特殊性质是如何又为何出现的. 然后我们便能得出量子化引力如此困难的原因 (包括不可重整性), 可以完全归结为一句话:
@@ -77,7 +78,7 @@
 \begin{equation}
 \phi'(x)=g(x)\phi(x).
 \end{equation}
-从这个例子中可清晰地看到, 纤维中的坐标变换就是物理学家所说的规范变换. 注意尽管在很多教材中都不会强调 $G$ 只能线性地作用在纤维空间这一点, 但我们之后会提到, 这个条件实际上是非常重要的. 
+从这个例子中可清晰地看到, 纤维中的坐标变换就是物理学家所说的规范变换. 注意尽管在很多教材中都不会强调 $G$ 只能线性地作用在纤维空间这一点, 但我们之后会提到, 这个条件实际上是非常重要的.
 
 现在定义一类通过坐标变换 (在基和纤维方向) 相联系的纤维丛. 它的非平凡结构源于覆盖 $M$ 的不同开区域 $U_{i}$ 的坐标 (转变函数) 之间的连续性条件. 在物理中, 瞬子位形就是一个典型的非平凡纤维丛, 考虑四维球面为底流形 $M = S^{4}$, 纤维空间服从 $G = SU(2)$ 变换, 这时我们分别需要两个包含南北两极 $S^{4}$ 的小块, 两小块的重叠区域可标记为 $S^{3}$. 两组``坐标''通过规范变换相联系, 使得存在映射 $S^{3}\rightarrow G$. 若此映射是非平凡的, 我们就无法将总纤维丛表示为直积 $E = M\times F$ 的形式.
 
@@ -262,8 +263,8 @@ S_{m}=\int_{M}\,d^{4}x\bar{\psi}g^{\mu\nu}\gamma_{a}e^{a}_{\mu}(\partial_{\nu}+[
 $\gamma_{a}$ 为 $4\times 4$ Dirac 矩阵.
 
 假定其他可能的高阶导数项均可忽略, 并考虑 $S=S_{\Lambda}+S_{EH}+S_{m}$ 的最小作用量原理, 由对 $A_{\mu}^{A}$ 的变分 (这里还需假设费米场不存在非标量凝聚态) 则可以得到式 (26) 所示的无挠条件. 在此基础上, 等效原理便不再是前提假设, 而是可以仿射联络的动力学导出的. 对 $e_{\mu}^{a}$ 的变分则可以得到一般的 Einstein 方程或是广义相对论的 2--形式\footnote{由式 (25), 可以得到 Riemann 张量 $R_{\ \mu\nu\rho}^{\lambda}=[e^{-1}]^{\lambda}_{a}[\bar{D}_{\rho}A_{\nu}^{A}]_{b}^{a}e_{\mu}^{b}$.}. 我们将上述讨论归纳如表 2.
-
-\begin{center}
+\begin{table}
+\begin{center}\caption{如何由第一阶形式给出一般的广义相对论 (从上至下为逻辑顺序)}
 \begin{tabular}{|c|c|c|c|c|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
@@ -275,8 +276,9 @@ $\gamma_{a}$ 为 $4\times 4$ Dirac 矩阵.
   O(4)规范固定& 许多方式& 规范条件&$g_{\mu\nu}$ &10\\
   \hline
 \end{tabular}
-\caption{\caption{如何由第一阶形式给出一般的广义相对论 (从上至下为逻辑顺序)}}
+
 \end{center}
+\end{table}
 \section{标架丛约化与 Higgs 机制}
 在这一节中\footnote{这一节在源日本文献中没有, 是英文版新增的一节.}, 我们将讨论一类特殊情况下的纤维丛约化——Higgs 机制. 在我们的引力理论中, 如果我们将标架场看做 Higgs 场[7], 那么自然地会给出运动方程 (21).
 
@@ -341,21 +343,36 @@ g_{\mu\nu}=[g'\bar{e}_{\mu}]^{a}[g'\bar{e}_{\nu}]^{b}\eta_{ab},
 
 感谢 Kin-ya Oda 让作者将这篇文章写下来的建议, 感谢 Shigeki Sugimoto 关于标架场的物理意义的讨论, 感谢 Norihiro Tanahashi 以一位引力专家的身份对这篇文章的检阅, 感谢 Akinori Tanaka 关于为何 3 维球面是可平行化的问题的指导, 同时也感谢 Satoshi Yamaguchi 在阅读数学教材时对作者的帮助.
 
-[1] Hidenori Fukaya, ``Why is quantum gravity so difficult (compared to QCD)?", Soryushiron Kenkyu Vol 25(2016) No. 2.
-[2] R. Utiyama, ``Introduction to general gauge field theories" (1987) Iwatani (ISBN-10:
+\begin{thebibliography}{99}
+\bibitem{01}
+Hidenori Fukaya, ``Why is quantum gravity so difficult (compared to QCD)?", Soryushiron Kenkyu Vol 25(2016) No. 2.
+\bibitem{02}
+R. Utiyama, ``Introduction to general gauge field theories" (1987) Iwatani (ISBN-10:
 4000050400).
-[3] C. Nash and S. Sen, ``Topology and Geometry for Physicists", Dover Books on Mathe-
+\bibitem{03}
+C. Nash and S. Sen, ``Topology and Geometry for Physicists", Dover Books on Mathe-
 matics, (2011) (ISBN-10: 0486478521).
-[4] Shishichi Kobayashi and Katsumi Nomizu, Foundations of Differential Geometry Volume I, II, John Wiley & Sons (1996) (ISBN-10: 0471157333, 0471157325).
-[5] A. Palatini, Rend. Circ. Mat. Palermo 43, (1919) 203.
-[6] F. W. Hehl, J. D. McCrea, E. W. Mielke and Y. Ne'eman, Phys. Rept. 258, 1 (1995) doi: 10.1016/0370-1573(94)00111-F [gr-qc/9402012].
-[7] G. Sardanashvily, Int. J. Geom. Meth. Mod. Phys. 13, no. 06, 1650086 (2016) doi: 10.1142/S0219887816500869 [arXiv: 1602.06776 [math-ph]].
-[8] M. Heller, ``Evolution of Space--Time Structure", Concepts of Physics 3, 2006, pp. 119-133.
-[9] Mikio Nakahara, Geometry, Topology and Physics CRC Press, (2003) (ISBN-10: 0750306068).
-[10] M. Luscher, Nucl. Phys. B 549, 295 (1999) doi: 10.1016/S0550-3213(99)00115-7 [hep-lat/9811032].
-[11] M. Honda, Prog. Theor. Phys. 63, 1429 (1980). doi: 10.1143/PTP. 63. 1429.
-[12] Noboru Nakanihi, ``Quantum gravity and general relativity", Soryushiron Kenkyu Vol. 1 (2009).
-[13] M. Srednicki, ``Quantum Field Theory", Cambridge University Press (2007) (ISBN-10: 0521864496).
-[14] E. Witten, Nucl. Phys. B 311, 46 (1988) doi: 10.1016/0550-3213(88)90143-5.
-
+\bibitem{04}
+Shishichi Kobayashi and Katsumi Nomizu, Foundations of Differential Geometry Volume I, II, John Wiley \& Sons (1996) (ISBN-10: 0471157333, 0471157325).
+\bibitem{05}
+A. Palatini, Rend. Circ. Mat. Palermo 43, (1919) 203.
+\bibitem{06}
+F. W. Hehl, J. D. McCrea, E. W. Mielke and Y. Ne'eman, Phys. Rept. 258, 1 (1995) doi: 10.1016/0370-1573(94)00111-F [gr-qc/9402012].
+\bibitem{07}
+G. Sardanashvily, Int. J. Geom. Meth. Mod. Phys. 13, no. 06, 1650086 (2016) doi: 10.1142/S0219887816500869 [arXiv: 1602.06776 [math-ph]].
+\bibitem{08}
+M. Heller, ``Evolution of Space--Time Structure", Concepts of Physics 3, 2006, pp. 119-133.
+\bibitem{09}
+Mikio Nakahara, Geometry, Topology and Physics CRC Press, (2003) (ISBN-10: 0750306068).
+\bibitem{10}
+M. Luscher, Nucl. Phys. B 549, 295 (1999) doi: 10.1016/S0550-3213(99)00115-7 [hep-lat/9811032].
+\bibitem{11}
+M. Honda, Prog. Theor. Phys. 63, 1429 (1980). doi: 10.1143/PTP. 63. 1429.
+\bibitem{12}
+Noboru Nakanihi, ``Quantum gravity and general relativity", Soryushiron Kenkyu Vol. 1 (2009).
+\bibitem{13}
+M. Srednicki, ``Quantum Field Theory", Cambridge University Press (2007) (ISBN-10: 0521864496).
+\bibitem{14}
+E. Witten, Nucl. Phys. B 311, 46 (1988) doi: 10.1016/0550-3213(88)90143-5.
+\end{thebibliography}
 \end{document}
